@@ -1,0 +1,25 @@
+<!--
+  ~ Mage-World
+  ~
+  ~  @category    Mage-World
+  ~  @package     MW
+  ~  @author      Mage-world Developer
+  ~
+  ~  @copyright   Copyright (c) 2018 Mage-World (https://www.mage-world.com/)
+  -->
+
+<page layout="2columns-right" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="MW_EasyFaq/css/2right.css" />
+    </head>
+    <body>
+        <referenceContainer name="sidebar.additional">
+            <referenceBlock name="catalog.compare.sidebar" remove="true" />
+            <referenceBlock name="wishlist_sidebar" remove="true" />
+            <block class="MW\EasyFaq\Block\Category\Index" name="easyfaq-sidebar" template="MW_EasyFaq::category.phtml" cacheable="false" before="-"/>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block class="MW\EasyFaq\Block\Faq\Index" name="easyfaq-page" template="MW_EasyFaq::faq.phtml" cacheable="false"/>
+        </referenceContainer>
+    </body>
+</page>

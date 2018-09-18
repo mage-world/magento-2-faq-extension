@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+  ~ Mage-World
+  ~
+  ~  @category    Mage-World
+  ~  @package     MW
+  ~  @author      Mage-world Developer
+  ~
+  ~  @copyright   Copyright (c) 2018 Mage-World (https://www.mage-world.com/)
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="MW_EasyFaq::faq" title="Easy FAQ" translate="title" sortOrder="1">
+                    <resource id="MW_EasyFaq::faq_category" title="FAQ Category" translate="title" sortOrder="1"/>
+                    <resource id="MW_EasyFaq::faq_item" title="FAQ List" translate="title" sortOrder="5"/>
+                    <resource id="MW_EasyFaq::setting" title="Settings" translate="title" sortOrder="10"/>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

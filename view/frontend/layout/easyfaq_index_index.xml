@@ -1,0 +1,28 @@
+<!--
+  ~ Mage-World
+  ~
+  ~  @category    Mage-World
+  ~  @package     MW
+  ~  @author      Mage-world Developer
+  ~
+  ~  @copyright   Copyright (c) 2018 Mage-World (https://www.mage-world.com/)
+  -->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="MW_EasyFaq/css/general.css" />
+    </head>
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">FAQ</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="MW\EasyFaq\Block\Faq\Search" before="-" name="easyfaq-search" template="MW_EasyFaq::search.phtml" cacheable="false" />
+        </referenceContainer>
+        <referenceContainer name="footer">
+            <block class="MW\EasyFaq\Block\Faq\Item" after="-" name="faq-item-alias" template="MW_EasyFaq::item.phtml" cacheable="false" />
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,100 @@
+/*
+ * Mage-World
+ *
+ *  @category    Mage-World
+ *  @package     MW
+ *  @author      Mage-world Developer
+ *
+ *  @copyright   Copyright (c) 2018 Mage-World (https://www.mage-world.com/)
+ */
+
+.faq-list .category-title {
+	display: block;
+
+}
+
+.faq-list .category-title h3{
+	display: block;
+	text-transform: capitalize;
+	font-size: 18px;
+	margin: 65px 0 40px;
+}
+
+.faq-list .faq-grid {
+	
+}
+
+.faq-list .faq-item {
+	display: block;
+	width: 100%;
+	float: none;
+	margin: 0 0 40px;
+}
+
+.faq-item-question {
+	color: #007eb9;
+	display: block;
+	cursor: pointer;
+	margin: 0 0 15px;
+}
+
+.faq-item-question.expanse {
+	color: inherit;
+}
+
+.faq-item-answer {
+	display: none;
+}
+
+.faq-search {
+	display: table;
+	width: 100%;
+}	
+
+.faq-search label {
+	display: table-cell;
+	vertical-align: middle;
+	white-space: nowrap;
+	width: 1%;
+	padding-right: 15px;
+}
+
+.faq-search input {
+	display: table-cell;
+	vertical-align: middle;
+	white-space: nowrap;
+	width: 100%;
+	max-width: 320px;
+}
+
+.faq-category-container {
+	
+}
+
+.faq-category-container ul {
+	padding: 0;
+}
+
+.faq-category-item {
+	list-style: none;
+	font-weight: 600;
+	text-transform: capitalize;
+	margin: 0 0 15px;
+	cursor: pointer;
+}
+
+.faq-category-item.selected {
+	color: #007eb9;
+}
+
+.page-layout-2columns-right .faq-category-container.fixed-top {
+	margin-left: 2%;
+}
+
+.faq-category-container > h2 {
+	margin-top: 0;
+}
+
+.page-footer .faq{
+	text-align: center !important;
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!--
+  ~ Mage-World
+  ~
+  ~  @category    Mage-World
+  ~  @package     MW
+  ~  @author      Mage-world Developer
+  ~
+  ~  @copyright   Copyright (c) 2018 Mage-World (https://www.mage-world.com/)
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mageworld" translate="label" sortOrder="100">
+            <label>Mage World Extension</label>
+        </tab>
+        <section id="easyfaq" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Easy FAQ Configuration</label>
+            <tab>mageworld</tab>
+            <resource>MW_EasyFaq::setting</resource>
+            <group id="general" translate="label" sortOrder="1" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" sortOrder="1" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="page_title" translate="label" sortOrder="5" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Page Title</label>
+                </field>
+                <field id="meta_title" translate="label" sortOrder="10" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Meta Title</label>
+                    <!--<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>-->
+                </field>
+                <field id="meta_keywords" translate="label" sortOrder="20" type="textarea" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Meta Keywords</label>
+                    <!--<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>-->
+                </field>
+                <field id="meta_description" translate="label" sortOrder="30" type="textarea" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Meta Description</label>
+                    <comment>
+                        Maximum 255 chars. Meta Description should optimally be between 150-160 characters
+                    </comment>
+                    <!--<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>-->
+                </field>
+                <field id="layout" translate="label" sortOrder="30" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Layout Style</label>
+                    <source_model>MW\EasyFaq\Model\Source\Config\Layout</source_model>
+                </field>
+                <field id="page_type" translate="label" sortOrder="35" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Page Style</label>
+                    <source_model>MW\EasyFaq\Model\Source\Config\PageType</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

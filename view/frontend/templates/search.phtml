@@ -1,0 +1,67 @@
+<div class="faq-search">
+    <label for="name"><?php /* @escapeNotVerified */ echo __("FAQ Search"); ?></label>
+    <input type="text" id="faq-search" name="faq-search" placeholder="<?php /* @escapeNotVerified */ echo __("Search...") ?>">
+</div>
+
+<script>
+    require(
+        [
+            'jquery',
+            'MW_EasyFaq/js/faq/grid',
+            'MW_EasyFaq/js/faq/1column/grid'
+        ],function($, FaqGrid, FaqGridOneCol){
+            $('#faq-search').change(function(e){
+                var isAjaxPage = <?php /* @escapeNotVerified */ echo $block->isAjaxPageType()?1:0; ?>;
+                if(isAjaxPage){
+                    $('.loading-mask').show();
+                    $.get("<?php /* @escapeNotVerified */ echo $this->getUrl('easyfaq/index/search'); ?>"+"key_search/"+$('#faq-search').val(), function(res){
+                        var res = JSON.parse(res);
+                        FaqGrid().setItems(res);
+                        FaqGridOneCol().setItems(res);
+                        $('.loading-mask').hide();
+                    });
+                }
+                else{
+                    var searchKey = $('#faq-search').val();
+                    var allItems = FaqGrid().allItems();
+                    if(!allItems.length){
+                        allItems = FaqGridOneCol().allItems();
+                    }
+                    if(searchKey){
+                        let searchItems = [];
+                        allItems.forEach(function(obj) {
+                            var searchObj = [];
+                            for(var key in obj)
+                                searchObj[key] = obj[key];
+                            if(obj.faq_items){
+                                var searchFaqItems =  obj.faq_items.filter(function(item) {
+                                    return (item.question.toLowerCase().indexOf(searchKey) >= 0 || item.answer.toLowerCase().indexOf(searchKey) >= 0);
+                                });
+
+                                if(searchFaqItems){
+                                    searchObj.faq_items = searchFaqItems;
+                                }
+                                else{
+                                    searchObj.faq_item = null;
+                                }
+                            }
+                            else{
+                                searchObj.faq_items = null;
+                            }
+                            searchItems.push(searchObj);
+                        });
+                        FaqGrid().setItems([]);
+                        FaqGrid().setItems(searchItems);
+                        FaqGridOneCol().setItems([]);
+                        FaqGridOneCol().setItems(searchItems);
+                    }
+                    else{
+                        FaqGrid().setItems([]);
+                        FaqGrid().setItems(allItems);
+                        FaqGridOneCol().setItems([]);
+                        FaqGridOneCol().setItems(allItems);
+                    }
+                }
+            });
+        });
+</script>

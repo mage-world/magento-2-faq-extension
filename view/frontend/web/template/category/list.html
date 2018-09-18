@@ -1,0 +1,12 @@
+<!--
+  ~ Mage-World
+  ~
+  ~  @category    Mage-World
+  ~  @package     MW
+  ~  @author      Mage-world Developer
+  ~
+  ~  @copyright   Copyright (c) 2018 Mage-World (https://www.mage-world.com/)
+  -->
+<ul data-bind="foreach: items, afterRender: firstItemSelected">
+    <li class="faq-category-item" data-bind="text: name, click: $parent.categorySelected.bind($parent)"></li>
+</ul>

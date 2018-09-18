@@ -1,0 +1,110 @@
+<?php
+$categories = $block->getCategories();
+$categoriesJsonData = $block->getCategoriesJsData();
+$isAjaxType = $block->isAjaxPageType();
+
+//\Zend_Debug::dump($categories->getData());
+?>
+<div class="loading-mask faq-loading" style="display: none;" data-role="loader">
+    <div class="popup popup-loading">
+        <div class="popup-inner">
+            <img alt="Loading..." src="<?= /* @escapeNotVerified */ $this->getLoadingPath(); ?>">
+            Please wait...
+        </div>
+    </div>
+</div>
+<div class="faq-category-container">
+    <h2><?php /* @escapeNotVerified */ echo __("Categories") ?></h2>
+    <div class="faq-category-list" data-bind="scope: 'category-list'">
+
+        <!-- ko template: getTemplate() --><!-- /ko -->
+
+    </div>
+</div>
+
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "category-list": {
+                    "component": "MW_EasyFaq/js/category/list"
+                }
+            }
+        }
+    }
+}
+</script>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "MW_EasyFaq/js/category/list": {
+                "categories": <?php /* @escapeNotVerified */ echo $categoriesJsonData; ?>,
+                "get_faq_url": <?php /* @escapeNotVerified */ echo '"' . $this->getUrl('easyfaq/category/getfaq') . '"'; ?>,
+                "is_ajax_type": <?php /* @escapeNotVerified */ echo $isAjaxType?1:0; ?>
+            }
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    require([
+        'jquery',
+        'priceBox'
+    ], function($){
+        function repositionProductInfoDiv(){
+            var mainContainer = jQuery('.columns');
+
+            var sidebar = jQuery('.sidebar');
+            
+            var productInfoContainer = jQuery('.faq-category-container');
+            var productShotsContainer = jQuery('.column.main');
+            var scrollPosition = jQuery(window).scrollTop();
+            var topPosition = (mainContainer.height() - productInfoContainer.height());
+          
+            if (productShotsContainer.height() > productInfoContainer.height()) {
+                if (scrollPosition >= (mainContainer.offset().top + (mainContainer.height() - productInfoContainer.height()))) { //  || ((productInfoContainer.offset().top + productInfoContainer.height())>(productShotsContainer.offset().top + productShotsContainer.height()))
+                    productInfoContainer.css('position', 'relative').css('top', topPosition).css('left', '0px').css('width', '');
+                } else if (scrollPosition > (mainContainer.offset().top)){
+                    var leftOffset = sidebar.offset().left ;
+                    var calculatedWidth = sidebar.width() ;
+                    productInfoContainer.css('position', 'fixed').css('top', '10px').css('left', leftOffset).css('width', calculatedWidth).css('background-color', 'white').addClass('fixed-top'); 
+                } else {
+                    productInfoContainer.css('position', 'relative').css('top', '0px').css('left', '0px').css('width', '').removeClass('fixed-top'); 
+                }
+            } else {
+                if (scrollPosition > (productShotsContainer.offset().top)) {
+                    productInfoContainer.css('position', 'relative').css('top', topPosition).css('left', '0px').css('width', ''); 
+                } else {
+                    productInfoContainer.css('position', 'relative').css('top', '0px').css('left', '0px').css('width', '').removeClass('fixed-top'); 
+                }
+            }
+        }
+
+        jQuery(window).scroll(function(){
+            if (jQuery(window).innerWidth() >= 768) {
+                repositionProductInfoDiv();
+            } else {
+                jQuery('.faq-category-container').css('position', 'relative').css('top', '0px').css('left', '0px').removeClass('fixed-top'); 
+            }
+        });
+
+        jQuery('.faq-list').resize(function(){
+            if (jQuery(window).innerWidth() >= 768) {
+                repositionProductInfoDiv();
+            } else {
+                jQuery('.faq-category-container').css('position', 'relative').css('top', '0px').css('left', '0px').removeClass('fixed-top'); 
+            }
+        });
+
+        jQuery('.faq-item-question').on('click', function (){
+            if (jQuery(window).innerWidth() >= 768) {
+                setTimeout(function(){
+                    repositionProductInfoDiv();
+                }, 300);
+            } else {
+                jQuery('.faq-category-container').css('position', 'relative').css('top', '0px').css('left', '0px').removeClass('fixed-top'); 
+            }
+        })
+    });
+</script>
