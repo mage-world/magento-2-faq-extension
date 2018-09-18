@@ -1,0 +1,37 @@
+<?php
+$itemsJsonData = $block->getDataOneColumnJson();
+?>
+
+<div class="faq-container">
+    <div class="faq-list" data-bind="scope: 'faq-grid'">
+
+        <!-- ko template: getTemplate() --><!-- /ko -->
+
+    </div>
+</div>
+
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "faq-grid": {
+                    "component": "MW_EasyFaq/js/faq/grid"
+                }
+            }
+        }
+    }
+}
+</script>
+
+<?php if(!$block->isAjaxPageType()){ ?>
+<script type="text/x-magento-init">
+{
+    "*": {
+        "MW_EasyFaq/js/faq/grid": {
+            "items": <?php /* @escapeNotVerified */ echo $itemsJsonData; ?>
+        }
+    }
+}
+</script>
+<?php } ?>

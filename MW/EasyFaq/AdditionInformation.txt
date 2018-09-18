@@ -1,0 +1,15 @@
+- Version: 1.0.0
+- Require Magento version: 2.0, 2.1, 2.2, ...
+- Require Browser: Google Chrome, Firefox, Safari, Microsoft Edge, IE, ...
+- External Library: None
+- Price: free
+- Feature:
+    Configuration:
+        - On/Off module
+        - Page title, meta title, meta key, meta description
+        - Layout type: 1 column, 2 columns left, 2 columns right
+        - Page type: Ajax page or smooth scrolling
+
+    Category management: Manage all category for all FAQ
+
+    FAQ Management: Manage all Question and Answer.

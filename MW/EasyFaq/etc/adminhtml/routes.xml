@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+  ~ Mage-World
+  ~
+  ~  @category    Mage-World
+  ~  @package     MW
+  ~  @author      Mage-world Developer
+  ~
+  ~  @copyright   Copyright (c) 2018 Mage-World (https://www.mage-world.com/)
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <route id="easyfaq" frontName="easyfaq">
+            <module name="MW_EasyFaq" before="Magento_Backend"/>
+        </route>
+    </router>
+</config>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+  ~ Mage-World
+  ~
+  ~  @category    Mage-World
+  ~  @package     MW
+  ~  @author      Mage-world Developer
+  ~
+  ~  @copyright   Copyright (c) 2018 Mage-World (https://www.mage-world.com/)
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="MW_EasyFaq::faq" title="Easy FAQ" translate="title" module="MW_EasyFaq" sortOrder="0" resource="MW_EasyFaq::faq"/>
+
+        <add id="MW_EasyFaq::faq_category" title="Manage FAQ Category" translate="title" module="MW_EasyFaq" parent="MW_EasyFaq::faq" sortOrder="10" resource="MW_EasyFaq::faq_category" action="easyfaq/category/index"/>
+        <add id="MW_EasyFaq::faq_item" title="Manage FAQ" translate="title" module="MW_EasyFaq" parent="MW_EasyFaq::faq" sortOrder="20" resource="MW_EasyFaq::faq_item" action="easyfaq/faq/index"/>
+        <add id="MW_EasyFaq::setting" title="Settings" module="MW_EasyFaq" translate="title" parent="MW_EasyFaq::faq" sortOrder="30" resource="MW_EasyFaq::setting" action="adminhtml/system_config/edit/section/easyfaq"/>
+    </menu>
+</config>

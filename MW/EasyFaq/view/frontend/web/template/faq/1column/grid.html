@@ -1,0 +1,35 @@
+<!--
+  ~ Mage-World
+  ~
+  ~  @category    Mage-World
+  ~  @package     MW
+  ~  @author      Mage-world Developer
+  ~
+  ~  @copyright   Copyright (c) 2018 Mage-World (https://www.mage-world.com/)
+  -->
+
+<!--ko if: items().length > 0-->
+<div class="" data-bind="foreach: {data: items, as: 'item'}">
+    <div class="faq-one-column-item">
+        <!--ko if: $root = $parent-->
+        <!--/ko-->
+        <div class="category-title">
+            <h3 data-bind="text: item.name"></h3>
+        </div>
+        <!--ko if: item.faq_items.length > 0-->
+        <div class="faq-grid" data-bind="foreach: {data: item.faq_items, as: 'faq'}">
+            <div class="faq-item col-sm-4">
+                <h4 class="faq-item-question" data-bind="text: $t(faq.question), click: $root.showAnswer"></h4>
+                <div class="faq-item-answer" data-bind="html: $t(faq.answer)"></div>
+            </div>
+        </div>
+        <!--/ko-->
+
+        <!--ko ifnot: item.faq_items.length > 0-->
+        <div class="faq-no-data">
+            <em data-bind="text: $t('This category no has data')"></em>
+        </div>
+        <!--/ko-->
+    </div>
+</div>
+<!--/ko-->

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+  ~ Mage-World
+  ~
+  ~  @category    Mage-World
+  ~  @package     MW
+  ~  @author      Mage-world Developer
+  ~
+  ~  @copyright   Copyright (c) 2018 Mage-World (https://www.mage-world.com/)
+  -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="header.links">
+            <block class="MW\EasyFaq\Block\Link" name="faq-header-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">FAQ</argument>
+                    <argument name="path" xsi:type="string" translate="true">easyfaq/index/index</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="footer_links">
+            <block class="MW\EasyFaq\Block\BackLink" name="faq-footer-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Extension be design by Mage-World</argument>
+                    <argument name="path" xsi:type="string" translate="true">https://mage-world.com/</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

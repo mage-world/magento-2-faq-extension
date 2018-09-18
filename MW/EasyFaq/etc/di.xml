@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Mage-World
+  ~
+  ~  @category    Mage-World
+  ~  @package     MW
+  ~  @author      Mage-world Developer
+  ~
+  ~  @copyright   Copyright (c) 2018 Mage-World (https://www.mage-world.com/)
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="mw_faq_category_listing_data_source" xsi:type="string">MW\EasyFaq\Model\ResourceModel\FaqCategory\Grid\Collection</item>
+                <item name="mw_faq_listing_data_source" xsi:type="string">MW\EasyFaq\Model\ResourceModel\Faq\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
