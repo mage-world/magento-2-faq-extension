@@ -6,9 +6,13 @@ Magento 2 FAQ extension is a solution to save time for both store owners and cus
 * Support: https://support.mage-world.com/hc/en-us/requests/new
 # How to install: 
 * Conditions:
+
 If you have a dev site, please install on it to test first.
+
 If you don't have a dev site, please backup source code and database of live site before installation.
+
 A ftp client software: Filezilla, Winscp.
+
 * Step 1: Download source code from MageWorld.
 
 After you complete your order, please go to My Downloads to download extension.
