@@ -1,1 +1,1 @@
-# Magento-2-EasyFaq-Extension
+# Magento-2-Faq-Extension
