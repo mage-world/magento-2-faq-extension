@@ -4,16 +4,16 @@ Magento 2 FAQ extension is a solution to save time for both store owners and cus
 * [Backend](https://magento2.mage-world.com/demo03/admin/admin/system_config/edit/section/easyfaq/)
 * [Frontend](http://magento2.mage-world.com/demo03/easyfaq/index/index/)
 # Highlight Features
-* Smart search box 
+* **Smart search box** 
 
 The FAQ extension make it easier for customer to get the answer for what they concern about. By just entering a keyword on the FAQ page, customers will see everything related to the topic they are looking for. 
-* Show featured categories and questions 
+* **Show featured categories and questions**
 
 On the FAQ page, questions are devided into different categories and all of them are displayed as a menu on a side of the page. This brings the best effect to customers that they can interact with the site easily. 
-* Allow customers to collapse or expand the question-view section
+* **Allow customers to collapse or expand the question-view section**
 
 With just one click to open or close the answer for each question, this feature does not require customers to redirect page by page andsave their time.
-* Diversity of page layout and style
+* **Diversity of page layout and style**
 
 There different styles and layouts for administrators to choose and apply to their store. The feature brings more choices to the web owners and they can select the best one for their store.
 # Documentation:
