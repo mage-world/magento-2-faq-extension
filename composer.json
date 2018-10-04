@@ -1,5 +1,5 @@
 {
-  "name": "mageworldofficial/easyfaq",
+  "name": "mageworld/easyfaq",
   "description": "MageWorld - Easy FAQ module",
   "require": {
     "php": "~5.5.0|~5.6.0|~7.0.0|~7.1.0"
