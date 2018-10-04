@@ -1,9 +1,22 @@
-# Magento-2-Faq-Extension
+# Magento 2 FAQ Extension
 Magento 2 FAQ extension is a solution to save time for both store owners and customers. The extensions enhances a page concluding frequently asked questions with the answers so it is easier for customers to search for something they concern about that suppliers are not available to explain to them immediately. 
+# Highlight Features
+* Smart search box 
+
+The FAQ extension make it easier for customer to get the answer for what they concern about. By just entering a keyword on the FAQ page, customers will see everything related to the topic they are looking for. 
+* Show featured categories and questions 
+
+On the FAQ page, questions are devided into different categories and all of them are displayed as a menu on a side of the page. This brings the best effect to customers that they can interact with the site easily. 
+* Allow customers to collapse or expand the question-view section
+
+With just one click to open or close the answer for each question, this feature does not require customers to redirect page by page andsave their time.
+* Diversity of page layout and style
+
+There different styles and layouts for administrators to choose and apply to their store. The feature brings more choices to the web owners and they can select the best one for their store.
 # Documentation:
 * Product page: https://www.mage-world.com/easy-faq-magento-extension.html
 * User guide: https://docs.mage-world.com/doku.php?id=magento_2:faq
-* Support: https://support.mage-world.com/hc/en-us/requests/new
+
 # How to install: 
 * Conditions:
 
@@ -32,3 +45,7 @@ php bin/magento setup:static-content:deploy
 
 php bin/magento cache:flush
 </code>
+
+# Support: 
+* Tell us your problem: https://support.mage-world.com/hc/en-us
+* FAQ: https://www.mage-world.com/faq
