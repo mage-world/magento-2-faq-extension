@@ -1,5 +1,8 @@
 # Magento 2 FAQ Extension
 Magento 2 FAQ extension is a solution to save time for both store owners and customers. The extensions enhances a page concluding frequently asked questions with the answers so it is easier for customers to search for something they concern about that suppliers are not available to explain to them immediately. 
+# Demo
+* [Backend](https://magento2.mage-world.com/demo03/admin/admin/system_config/edit/section/easyfaq/)
+* [Frontend](http://magento2.mage-world.com/demo03/easyfaq/index/index/)
 # Highlight Features
 * Smart search box 
 
