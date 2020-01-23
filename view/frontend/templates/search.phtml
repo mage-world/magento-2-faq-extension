@@ -22,7 +22,7 @@
                     });
                 }
                 else{
-                    var searchKey = $('#faq-search').val();
+                    var searchKey = $('#faq-search').val().toLowerCase();
                     var allItems = FaqGrid().allItems();
                     if(!allItems.length){
                         allItems = FaqGridOneCol().allItems();
