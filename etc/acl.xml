@@ -15,9 +15,16 @@
         <resources>
             <resource id="Magento_Backend::admin">
                 <resource id="MW_EasyFaq::faq" title="Easy FAQ" translate="title" sortOrder="1">
-                    <resource id="MW_EasyFaq::faq_category" title="FAQ Category" translate="title" sortOrder="1"/>
-                    <resource id="MW_EasyFaq::faq_item" title="FAQ List" translate="title" sortOrder="5"/>
+                    <resource id="MW_EasyFaq::faq_category" title="Manage FAQ Category" translate="title" sortOrder="1"/>
+                    <resource id="MW_EasyFaq::faq_item" title="Manage FAQ" translate="title" sortOrder="5"/>
                     <resource id="MW_EasyFaq::setting" title="Settings" translate="title" sortOrder="10"/>
+                </resource>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="MW_EasyFaq::system_config" title="FAQ Configuration" />
+                        </resource>
+                    </resource>
                 </resource>
             </resource>
         </resources>
