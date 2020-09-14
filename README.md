@@ -1,4 +1,4 @@
-# Magento 2 FAQ Extension by [MageWorld](https://www.mage-world.com/magento-2-affiliate-extension.html)
+# Magento 2 FAQ Extension by [MageWorld](https://www.mage-world.com/magento-2-extensions.html)
 Magento 2 FAQ extension is a solution to save time for both store owners and customers. The extensions enhances a page concluding frequently asked questions with the answers so it is easier for customers to search for something they concern about that suppliers are not available to explain to them immediately. 
 # Demo
 * [Backend](https://magento2.mage-world.com/demo03/admin/admin/system_config/edit/section/easyfaq/)
@@ -18,7 +18,7 @@ With just one click to open or close the answer for each question, this feature 
 There different styles and layouts for administrators to choose and apply to their store. The feature brings more choices to the web owners and they can select the best one for their store.
 # Documentation:
 * Product page: https://www.mage-world.com/easy-faq-magento-extension.html
-* User guide: https://docs.mage-world.com/doku.php?id=magento_2:faq
+* User guide: https://support.mage-world.com/hc/en-us/articles/360047158372-Magento-2-Easy-FAQ-Extension-User-Guide
 
 # How to install: 
 * Conditions:
@@ -49,3 +49,4 @@ Login to ssh, go to Magento root folder and run these command lines:
 # Support: 
 * Tell us your problem: https://support.mage-world.com/hc/en-us
 * FAQ: https://www.mage-world.com/faq
+* Related: https://www.mage-world.com/magento-2-affiliate-extension.html
