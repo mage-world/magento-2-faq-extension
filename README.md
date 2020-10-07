@@ -49,4 +49,4 @@ Login to ssh, go to Magento root folder and run these command lines:
 # Support: 
 * Tell us your problem: https://support.mage-world.com/hc/en-us
 * FAQ: https://www.mage-world.com/faq
-* Related: https://www.mage-world.com/magento-2-affiliate-extension.html
+* Magento 2 for affiliate: https://www.mage-world.com/magento-2-affiliate-extension.html
